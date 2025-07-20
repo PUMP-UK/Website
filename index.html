@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Power Up My Property - Period property renovations, electrical work, masonry and carpentry. Trusted home improvement experts.">
+  <meta name="keywords" content="period renovation, electrical services, masonry, carpentry, domestic improvements, heritage restoration">
+  <meta name="author" content="Power Up My Property">
+  <title>Power Up My Property | Period Renovation & Home Services</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; color: #333; }
+    header { background: url('Assets/village%201.jpg') no-repeat center center; background-size: cover; color: white; padding: 100px 20px 80px; text-align: center; position: relative; }
+    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 0; }
+    header .content { position: relative; z-index: 1; }
+    header img { width: 140px; border-radius: 8px; }
+    h1 { font-size: 2.8em; margin: 20px 0 10px; }
+    .tagline { font-size: 1.3em; }
+    .filter-buttons { text-align: center; margin: 20px 0; }
+    .filter-buttons button { padding: 10px 20px; margin: 5px; border: none; background: #1f2612; color: #fff; border-radius: 4px; cursor: pointer; }
+    .filter-buttons button.active, .filter-buttons button:hover { background-color: #ffd700; color: #1f2612; }
+    .carousel-container { position: relative; overflow: hidden; margin: 0 auto; max-width: 95%; }
+    .carousel-track { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0; gap: 20px; }
+    .carousel-item { flex: 0 0 auto; width: 280px; display: inline-flex; flex-direction: column; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 10px; text-align: center; cursor: pointer; }
+    .carousel-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; }
+    .carousel-item p { margin-top: 10px; font-weight: 600; color: #333; }
+    .carousel-btn { position: absolute; top: 45%; transform: translateY(-50%); background: rgba(31, 38, 18, 0.8); color: white; border: none; font-size: 2em; padding: 10px 15px; cursor: pointer; z-index: 10; border-radius: 4px; }
+    .carousel-btn.left { left: 0; }
+    .carousel-btn.right { right: 0; }
+    .carousel-btn:hover { background: #ffd700; color: #1f2612; }
+    .lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+    .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
+    footer { background: #1f2612; color: white; text-align: center; padding: 40px 20px; }
+    .contact-btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #ffd700; color: #1f2612; text-decoration: none; font-weight: bold; border-radius: 6px; }
+    .socials a { margin: 0 10px; color: #ffd700; text-decoration: none; }
+    @media (max-width: 768px) { .carousel-item { width: 80%; } }
+  </style>
+<header style="position: relative; background: url('Assets/village 1.jpg') no-repeat center center; background-size: cover; padding: 100px 20px 100px;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+               background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
+               z-index: 0;"></div>
+
+  <div class="content" style="position: relative; z-index: 1; text-align: center; color: white;">
+    <img src="Assets/Logo Black.jpeg" alt="Power Up My Property Logo"
+         style="width: 280px; margin-bottom: 20px;" />
+
+    <h1 style="font-size: 2.8em; margin: 0 0 10px;">Power Up My Property</h1>
+    <p class="tagline" style="font-size: 1.3em;">Preserving Character. Powering Homes. Renovating with Craft.</p>
+
+    <a href=\"mailto: powerupmyproperty@gmail.com\" class=\"contact-btn\" 
+       style=\"margin-top: 25px; display: inline-block; padding: 14px 30px; font-size: 1em; font-weight: bold;
+              background-color: #ffd700; color: #1f2612; text-decoration: none; border-radius: 6px;\">
+      Contact Us Now
+    </a>
+  </div>
+</header>
+
+
+  <section id="projects" style="background-color:#fff;">
+    <h2 style="text-align:center; font-size:2em; margin:40px 0 20px;">Our Recent Projects</h2>
+
+
+<div class="filter-buttons">
+  <button class="filter-btn active" data-category="all">All</button>
+  <button class="filter-btn" data-category="electrical">Electrical</button>
+  <button class="filter-btn" data-category="commercial">Commercial Electrical</button>
+  <button class="filter-btn" data-category="plastering">Plastering</button>
+  <button class="filter-btn" data-category="aircon">Air Con</button>
+  <button class="filter-btn" data-category="interior">Interior</button>
+  <button class="filter-btn" data-category="exterior">Exterior</button>
+  <button class="filter-btn" data-category="wah">Working at Heights</button>
+</div>
+
+<div class="carousel-container">
+  <button class="carousel-btn left">&#10094;</button>
+  <div class="carousel-track">
+
+    <!-- Electrical -->
+    <div class="carousel-item" data-category="electrical">
+      <img src="Assets/Main Board 1.jpeg" alt="Main Board 1">
+      <p>Main Board 1</p>
+    </div>
+    <div class="carousel-item" data-category="electrical">
+      <img src="Assets/Garrage Board 1.jpeg" alt="Garage Board 1">
+      <p>Garage Board 1</p>
+    </div>
+    <div class="carousel-item" data-category="electrical">
+      <img src="Assets/Garrage Board 2.jpeg" alt="Garage Board 2">
+      <p>Garage Board 2</p>
+    </div>
+    <div class="carousel-item" data-category="electrical">
+      <img src="Assets/Outside Light 1.jpeg" alt="Outside Light">
+      <p>Outside Light</p>
+    </div>
+
+    <!-- Commercial Electrical -->
+    <div class="carousel-item" data-category="commercial">
+      <img src="Assets/Commercial Board 1.jpeg" alt="Commercial Board 1">
+      <p>Commercial Consumer Unit</p>
+    </div>
+    <div class="carousel-item" data-category="commercial">
+      <img src="Assets/EV Charger 1.jpeg" alt="EV Charger">
+      <p>EV Charger Installation</p>
+    </div>
+
+    <!-- Plastering -->
+    <div class="carousel-item" data-category="plastering">
+      <img src="Assets/Plastering Arch 2.jpeg" alt="Plastering Arch 2">
+      <p>Plastering Arch 2</p>
+    </div>
+    <div class="carousel-item" data-category="plastering">
+      <img src="Assets/Plastering Arch.jpeg" alt="Plastering Arch">
+      <p>Plastering Arch</p>
+    </div>
+    <div class="carousel-item" data-category="plastering">
+      <img src="Assets/Plastering 7.jpeg" alt="Plastering 7">
+      <p>Plastering 7</p>
+    </div>
+    <div class="carousel-item" data-category="plastering">
+      <img src="Assets/Plastering 3.jpeg" alt="Plastering 3">
+      <p>Plastering 3</p>
+    </div>
+
+    <!-- Air Con -->
+    <div class="carousel-item" data-category="aircon">
+      <img src="Assets/Air Con 1.jpeg" alt="Air Conditioning Unit 1">
+      <p>Air Conditioning Unit 1</p>
+    </div>
+    <div class="carousel-item" data-category="aircon">
+      <img src="Assets/Air Con 2.jpeg" alt="Air Conditioning Unit 2">
+      <p>Air Conditioning Unit 2</p>
+    </div>
+
+    <!-- Working at Heights -->
+    <div class="carousel-item" data-category="wah">
+      <img src="Assets/WAH 1.jpeg" alt="WAH 1">
+      <p>Working at Heights 1</p>
+    </div>
+    <div class="carousel-item" data-category="wah">
+      <img src="Assets/WAH 2.jpeg" alt="WAH 2">
+      <p>Working at Heights 2</p>
+    </div>
+
+  </div>
+  <button class="carousel-btn right">&#10095;</button>
+</div>
+
+  </section>
+
+
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="#" alt="Expanded View">
+  </div>
+
+
+  <footer>
+    <h2>Get in Touch</h2>
+    <p>Need a reliable team for your period property or home improvement project?</p>
+    <a href="mailto:powerupmyproperty@gmail.com" class="contact-btn">Contact Us Now</a>
+    <div class="socials" style="margin-top:20px;">
+      <a href="https://facebook.com/powerupmyproperty" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/powerupmyproperty" target="_blank">Instagram</a> |
+      <a href="tel:+447553097529">Call: 07553097529</a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.9em;">&copy; 2025 Power Up My Property. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const category = btn.getAttribute('data-category');
+        document.querySelectorAll('.carousel-item').forEach(item => {
+          item.style.display = category === 'all' || item.dataset.category === category ? 'inline-flex' : 'none';
+        });
+      });
+    });
+    document.querySelector('.carousel-btn.left').addEventListener('click', () => {
+      document.querySelector('.carousel-track').scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    document.querySelector('.carousel-btn.right').addEventListener('click', () => {
+      document.querySelector('.carousel-track').scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    document.querySelectorAll('.carousel-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+  </script>
+
+
+</body>
+</html>
