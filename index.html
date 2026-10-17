@@ -1,200 +1,190 @@
-<!DOCTYPE html>
-
-
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Power Up My Property - Period property renovations, electrical work, masonry and carpentry. Trusted home improvement experts.">
-  <meta name="keywords" content="period renovation, electrical services, masonry, carpentry, domestic improvements, heritage restoration">
-  <meta name="author" content="Power Up My Property">
-  <title>Power Up My Property | Period Renovation & Home Services</title>
-  <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; color: #333; }
-    header { background: url('Assets/village%201.jpg') no-repeat center center; background-size: cover; color: white; padding: 100px 20px 80px; text-align: center; position: relative; }
-    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 0; }
-    header .content { position: relative; z-index: 1; }
-    header img { width: 140px; border-radius: 8px; }
-    h1 { font-size: 2.8em; margin: 20px 0 10px; }
-    .tagline { font-size: 1.3em; }
-    .filter-buttons { text-align: center; margin: 20px 0; }
-    .filter-buttons button { padding: 10px 20px; margin: 5px; border: none; background: #1f2612; color: #fff; border-radius: 4px; cursor: pointer; }
-    .filter-buttons button.active, .filter-buttons button:hover { background-color: #ffd700; color: #1f2612; }
-    .carousel-container { position: relative; overflow: hidden; margin: 0 auto; max-width: 95%; }
-    .carousel-track { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-behavior: smooth; padding: 10px 0; gap: 20px; }
-    .carousel-item { flex: 0 0 auto; width: 280px; display: inline-flex; flex-direction: column; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 10px; text-align: center; cursor: pointer; }
-    .carousel-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; }
-    .carousel-item p { margin-top: 10px; font-weight: 600; color: #333; }
-    .carousel-btn { position: absolute; top: 45%; transform: translateY(-50%); background: rgba(31, 38, 18, 0.8); color: white; border: none; font-size: 2em; padding: 10px 15px; cursor: pointer; z-index: 10; border-radius: 4px; }
-    .carousel-btn.left { left: 0; }
-    .carousel-btn.right { right: 0; }
-    .carousel-btn:hover { background: #ffd700; color: #1f2612; }
-    .lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
-    .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 8px; }
-    footer { background: #1f2612; color: white; text-align: center; padding: 40px 20px; }
-    .contact-btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #ffd700; color: #1f2612; text-decoration: none; font-weight: bold; border-radius: 6px; }
-    .socials a { margin: 0 10px; color: #ffd700; text-decoration: none; }
-    @media (max-width: 768px) { .carousel-item { width: 80%; } }
-  </style>
-<header style="position: relative; background: url('Assets/village 1.jpg') no-repeat center center; background-size: cover; padding: 100px 20px 100px;">
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-               background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.35));
-               z-index: 0;"></div>
-
-  <div class="content" style="position: relative; z-index: 1; text-align: center; color: white;">
-    <img src="Assets/Logo Black.jpeg" alt="Power Up My Property Logo"
-         style="width: 280px; margin-bottom: 20px;" />
-
-    <h1 style="font-size: 2.8em; margin: 0 0 10px;">Power Up My Property</h1>
-    <p class="tagline" style="font-size: 1.3em;">Preserving Character. Powering Homes. Renovating with Craft.</p>
-
-    <a href=\"mailto: powerupmyproperty@gmail.com\" class=\"contact-btn\" 
-       style=\"margin-top: 25px; display: inline-block; padding: 14px 30px; font-size: 1em; font-weight: bold;
-              background-color: #ffd700; color: #1f2612; text-decoration: none; border-radius: 6px;\">
-      Contact Us Now
-    </a>
-  </div>
-</header>
-
-
-  <section id="projects" style="background-color:#fff;">
-    <h2 style="text-align:center; font-size:2em; margin:40px 0 20px;">Our Recent Projects</h2>
-
-
-<div class="filter-buttons">
-  <button class="filter-btn active" data-category="all">All</button>
-  <button class="filter-btn" data-category="electrical">Electrical</button>
-  <button class="filter-btn" data-category="commercial">Commercial Electrical</button>
-  <button class="filter-btn" data-category="plastering">Plastering</button>
-  <button class="filter-btn" data-category="aircon">Air Con</button>
-  <button class="filter-btn" data-category="interior">Interior</button>
-  <button class="filter-btn" data-category="exterior">Exterior</button>
-  <button class="filter-btn" data-category="wah">Working at Heights</button>
-</div>
-
-<div class="carousel-container">
-  <button class="carousel-btn left">&#10094;</button>
-  <div class="carousel-track">
-
-    <!-- Electrical -->
-    <div class="carousel-item" data-category="electrical">
-      <img src="Assets/Main Board 1.jpeg" alt="Main Board 1">
-      <p>Main Board 1</p>
-    </div>
-    <div class="carousel-item" data-category="electrical">
-      <img src="Assets/Garrage Board 1.jpeg" alt="Garage Board 1">
-      <p>Garage Board 1</p>
-    </div>
-    <div class="carousel-item" data-category="electrical">
-      <img src="Assets/Garrage Board 2.jpeg" alt="Garage Board 2">
-      <p>Garage Board 2</p>
-    </div>
-    <div class="carousel-item" data-category="electrical">
-      <img src="Assets/Outside Light 1.jpeg" alt="Outside Light">
-      <p>Outside Light</p>
-    </div>
-
-    <!-- Commercial Electrical -->
-    <div class="carousel-item" data-category="commercial">
-      <img src="Assets/Commercial Board 1.jpeg" alt="Commercial Board 1">
-      <p>Commercial Consumer Unit</p>
-    </div>
-    <div class="carousel-item" data-category="commercial">
-      <img src="Assets/EV Charger 1.jpeg" alt="EV Charger">
-      <p>EV Charger Installation</p>
-    </div>
-
-    <!-- Plastering -->
-    <div class="carousel-item" data-category="plastering">
-      <img src="Assets/Plastering Arch 2.jpeg" alt="Plastering Arch 2">
-      <p>Plastering Arch 2</p>
-    </div>
-    <div class="carousel-item" data-category="plastering">
-      <img src="Assets/Plastering Arch.jpeg" alt="Plastering Arch">
-      <p>Plastering Arch</p>
-    </div>
-    <div class="carousel-item" data-category="plastering">
-      <img src="Assets/Plastering 7.jpeg" alt="Plastering 7">
-      <p>Plastering 7</p>
-    </div>
-    <div class="carousel-item" data-category="plastering">
-      <img src="Assets/Plastering 3.jpeg" alt="Plastering 3">
-      <p>Plastering 3</p>
-    </div>
-
-    <!-- Air Con -->
-    <div class="carousel-item" data-category="aircon">
-      <img src="Assets/Air Con 1.jpeg" alt="Air Conditioning Unit 1">
-      <p>Air Conditioning Unit 1</p>
-    </div>
-    <div class="carousel-item" data-category="aircon">
-      <img src="Assets/Air Con 2.jpeg" alt="Air Conditioning Unit 2">
-      <p>Air Conditioning Unit 2</p>
-    </div>
-
-    <!-- Working at Heights -->
-    <div class="carousel-item" data-category="wah">
-      <img src="Assets/WAH 1.jpeg" alt="WAH 1">
-      <p>Working at Heights 1</p>
-    </div>
-    <div class="carousel-item" data-category="wah">
-      <img src="Assets/WAH 2.jpeg" alt="WAH 2">
-      <p>Working at Heights 2</p>
-    </div>
-
-  </div>
-  <button class="carousel-btn right">&#10095;</button>
-</div>
-
-  </section>
-
-
-  <div id="lightbox" class="lightbox">
-    <img id="lightbox-img" src="#" alt="Expanded View">
-  </div>
-
-
-  <footer>
-    <h2>Get in Touch</h2>
-    <p>Need a reliable team for your period property or home improvement project?</p>
-    <a href="mailto:powerupmyproperty@gmail.com" class="contact-btn">Contact Us Now</a>
-    <div class="socials" style="margin-top:20px;">
-      <a href="https://facebook.com/powerupmyproperty" target="_blank">Facebook</a> |
-      <a href="https://instagram.com/power_up_my_property" target="_blank">Instagram</a> |
-      <a href="tel:+447553097529">Call: 07553097529</a>
-    </div>
-    <p style="margin-top: 20px; font-size: 0.9em;">&copy; 2025 Power Up My Property. All rights reserved.</p>
-  </footer>
-
-
-  <script>
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const category = btn.getAttribute('data-category');
-        document.querySelectorAll('.carousel-item').forEach(item => {
-          item.style.display = category === 'all' || item.dataset.category === category ? 'inline-flex' : 'none';
-        });
-      });
-    });
-    document.querySelector('.carousel-btn.left').addEventListener('click', () => {
-      document.querySelector('.carousel-track').scrollBy({ left: -300, behavior: 'smooth' });
-    });
-    document.querySelector('.carousel-btn.right').addEventListener('click', () => {
-      document.querySelector('.carousel-track').scrollBy({ left: 300, behavior: 'smooth' });
-    });
-    document.querySelectorAll('.carousel-item img').forEach(img => {
-      img.addEventListener('click', () => {
-        document.getElementById('lightbox-img').src = img.src;
-        document.getElementById('lightbox').style.display = 'flex';
-      });
-    });
-    document.getElementById('lightbox').addEventListener('click', () => {
-      document.getElementById('lightbox').style.display = 'none';
-    });
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20251f">
+  <title>Electrical Work & Property Renovations in Gloucestershire | Power Up My Property</title>
+  <meta name="description" content="Electrical work, period property renovations, plastering, masonry and carpentry in Gloucestershire. Explore Steve’s work and contact Power Up My Property on 07553 097529.">
+  <link rel="canonical" href="https://www.powerupmyproperty.co.uk/">
+  <link rel="icon" type="image/jpeg" href="Assets/Logo%20Black.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Power Up My Property — Preserving character. Powering homes.">
+  <meta property="og:description" content="Electrical expertise and thoughtful renovations in Gloucestershire. See our work and discuss your project with Steve.">
+  <meta property="og:url" content="https://www.powerupmyproperty.co.uk/">
+  <meta property="og:image" content="https://www.powerupmyproperty.co.uk/Assets/approved-hero.png">
+  <meta property="og:image:alt" content="Historic Cotswold stone houses and a stone monument">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="Assets/site.css">
+  <script src="Assets/site.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Power Up My Property","url":"https://www.powerupmyproperty.co.uk/","logo":"https://www.powerupmyproperty.co.uk/Assets/Logo%20Black.jpeg","image":"https://www.powerupmyproperty.co.uk/Assets/approved-hero.png","telephone":"+447553097529","email":"powerupmyproperty@gmail.com","areaServed":{"@type":"AdministrativeArea","name":"Gloucestershire"},"description":"Electrical work and property renovations for domestic and commercial clients in Gloucestershire.","sameAs":["https://facebook.com/powerupmyproperty","https://instagram.com/power_up_my_property"]}
   </script>
-
-
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="home">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Power Up My Property — home"><img src="Assets/Logo%20Black.jpeg" width="1240" height="1240" alt="Power Up My Property"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span>Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+      <nav id="site-nav" aria-label="Main navigation"><a href="#services">Services</a><a href="#projects">Our work</a><a href="#contact">Contact</a></nav>
+      <span class="header-rule" aria-hidden="true"></span>
+      <a class="header-phone" href="tel:+447553097529">07553 097529</a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow light">Power Up My Property <span aria-hidden="true"></span></p>
+        <h1 id="hero-title">Preserving<br>character.<br><span>Powering homes.</span></h1>
+        <p class="hero-description">Electrical expertise and thoughtful renovations in Gloucestershire.</p>
+        <a class="button button-light" href="#contact">Discuss your project <span aria-hidden="true">↗</span></a>
+        <a class="hero-phone" href="tel:+447553097529">07553 097529</a>
+      </div>
+      <figure class="hero-image">
+        <img src="Assets/images/hero-1600.webp" srcset="Assets/images/hero-640.webp 640w, Assets/images/hero-1000.webp 1000w, Assets/images/hero-1600.webp 1559w" sizes="(max-width: 760px) 100vw, 60vw" width="1559" height="1009" alt="Historic Cotswold stone houses and a village monument — properties Steve has worked on" fetchpriority="high">
+        <figcaption>Gloucestershire <span aria-hidden="true">—</span> A place we know. Properties we care for.</figcaption>
+      </figure>
+    </section>
+    <section class="services section-shell" id="services" aria-labelledby="services-title">
+      <p class="service-line"><span>Electrical work</span><span>Period property renovations</span><span>Masonry &amp; carpentry</span></p>
+      <div class="intro-grid">
+        <h2 id="services-title">Care for the character.<br>Expertise for the everyday.</h2>
+        <p>Based in Gloucestershire, working with domestic and commercial clients. From electrical improvements to the details of a period property renovation.</p>
+      </div>
+      <div class="service-list">
+        <article><span class="service-number" aria-hidden="true">01</span><h3>Electrical services</h3><p>Electrical installations, consumer units, indoor and outdoor lighting, and home upgrades.</p><a href="#contact">Discuss electrical work <span aria-hidden="true">↗</span></a></article>
+        <article><span class="service-number" aria-hidden="true">02</span><h3>Property renovations</h3><p>Plastering, carpentry and period property improvements, with attention to the character of the building.</p><a href="#contact">Discuss a renovation <span aria-hidden="true">↗</span></a></article>
+        <article><span class="service-number" aria-hidden="true">03</span><h3>Stone &amp; outdoor work</h3><p>Stonework, masonry and property improvements outside the home, from porches to garden projects.</p><a href="#contact">Discuss your property <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+    <section class="projects section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">A closer look</p><h2 id="projects-title">Our recent work</h2></div><p class="gallery-intro">The details, the progress, the finished work.<br> Photographs from our projects.</p></div>
+      <div class="gallery-toolbar" hidden>
+        <div class="filters" role="group" aria-label="Filter project photographs">
+          <button type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button type="button" data-filter="renovation" aria-pressed="false">Renovations</button>
+          <button type="button" data-filter="electrical" aria-pressed="false">Electrical</button>
+          <button type="button" data-filter="stone" aria-pressed="false">Stonework</button>
+          <button type="button" data-filter="aircon" aria-pressed="false">Air conditioning</button>
+          <button type="button" data-filter="height" aria-pressed="false">Working at height</button>
+        </div>
+        <div class="gallery-navigation"><span id="gallery-count" aria-hidden="true">01 / 14</span><button class="arrow" type="button" id="gallery-prev" aria-label="Previous project photograph" aria-controls="gallery-track">←</button><button class="arrow" type="button" id="gallery-next" aria-label="Next project photograph" aria-controls="gallery-track">→</button></div>
+      </div>
+      <p class="sr-only" id="gallery-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="gallery-track" id="gallery-track" role="region" aria-label="Project photographs. Scroll horizontally to browse." tabindex="0">
+        <article class="project-slide" data-category="renovation" data-title="Plastering arch">
+          <a class="project-image" href="Assets/Plastering%20Arch.jpeg" aria-label="View full photograph: Plastering arch">
+            <img src="Assets/images/plastering-arch-1200.webp" srcset="Assets/images/plastering-arch-600.webp 600w, Assets/images/plastering-arch-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1600" height="1200" alt="Period archway during plastering and renovation work" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Plastering arch</h3><p>Period property renovation</p></div>
+        </article>
+        <article class="project-slide" data-category="electrical" data-title="Outside lighting">
+          <a class="project-image" href="Assets/Outside%20Light%201.jpeg" aria-label="View full photograph: Outside lighting">
+            <img src="Assets/images/outside-light-1200.webp" srcset="Assets/images/outside-light-600.webp 600w, Assets/images/outside-light-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Outside light and cabling installed on a brick property" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Outside lighting</h3><p>Electrical installation</p></div>
+        </article>
+        <article class="project-slide" data-category="renovation" data-title="A freshly plastered arch">
+          <a class="project-image" href="Assets/Arch%20Final.jpeg" aria-label="View full photograph: A freshly plastered arch">
+            <img src="Assets/images/arch-finish-1200.webp" srcset="Assets/images/arch-finish-600.webp 600w, Assets/images/arch-finish-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1600" height="1200" alt="Fresh plaster around the archway in a room under renovation" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>A freshly plastered arch</h3><p>Plastering &amp; finishing</p></div>
+        </article>
+        <article class="project-slide" data-category="stone" data-title="Stone porch">
+          <a class="project-image" href="Assets/Stone%20Porch%201.jpeg" aria-label="View full photograph: Stone porch">
+            <img src="Assets/images/stone-porch-1200.webp" srcset="Assets/images/stone-porch-600.webp 600w, Assets/images/stone-porch-1200.webp 1152w" sizes="(max-width: 760px) 85vw, 72vw" width="1152" height="2048" alt="Stone porch under construction against a Cotswold stone building" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Stone porch</h3><p>Masonry in progress</p></div>
+        </article>
+        <article class="project-slide" data-category="electrical" data-title="Consumer unit">
+          <a class="project-image" href="Assets/Main%20Board%201.jpeg" aria-label="View full photograph: Consumer unit">
+            <img src="Assets/images/main-board-1200.webp" srcset="Assets/images/main-board-600.webp 600w, Assets/images/main-board-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Consumer unit with its cover removed showing circuit wiring" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Consumer unit</h3><p>Electrical work</p></div>
+        </article>
+        <article class="project-slide" data-category="electrical" data-title="Garage consumer unit">
+          <a class="project-image" href="Assets/Garrage%20Board%201.jpeg" aria-label="View full photograph: Garage consumer unit">
+            <img src="Assets/images/garage-board-1-1200.webp" srcset="Assets/images/garage-board-1-600.webp 600w, Assets/images/garage-board-1-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Garage electrical consumer unit installation" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Garage consumer unit</h3><p>Electrical work</p></div>
+        </article>
+        <article class="project-slide" data-category="electrical" data-title="Garage electrical work">
+          <a class="project-image" href="Assets/Garrage%20Board%202.jpeg" aria-label="View full photograph: Garage electrical work">
+            <img src="Assets/images/garage-board-2-1200.webp" srcset="Assets/images/garage-board-2-600.webp 600w, Assets/images/garage-board-2-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Another view of the garage consumer unit" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Garage electrical work</h3><p>Electrical work</p></div>
+        </article>
+        <article class="project-slide" data-category="renovation" data-title="The archway detail">
+          <a class="project-image" href="Assets/Plastering%20Arch%202.jpeg" aria-label="View full photograph: The archway detail">
+            <img src="Assets/images/arch-detail-1200.webp" srcset="Assets/images/arch-detail-600.webp 600w, Assets/images/arch-detail-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Plaster being finished by hand around the curve of an archway" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>The archway detail</h3><p>Plastering in progress</p></div>
+        </article>
+        <article class="project-slide" data-category="renovation" data-title="Plastering work">
+          <a class="project-image" href="Assets/Plastering%207.jpeg" aria-label="View full photograph: Plastering work">
+            <img src="Assets/images/plastering-7-1200.webp" srcset="Assets/images/plastering-7-600.webp 600w, Assets/images/plastering-7-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Plastering work inside a property" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Plastering work</h3><p>Property renovation</p></div>
+        </article>
+        <article class="project-slide" data-category="renovation" data-title="Interior plasterwork">
+          <a class="project-image" href="Assets/Plastering%203.jpeg" aria-label="View full photograph: Interior plasterwork">
+            <img src="Assets/images/plastering-3-1200.webp" srcset="Assets/images/plastering-3-600.webp 600w, Assets/images/plastering-3-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1600" height="901" alt="Interior walls during plastering work" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Interior plasterwork</h3><p>Property renovation</p></div>
+        </article>
+        <article class="project-slide" data-category="aircon" data-title="Air conditioning">
+          <a class="project-image" href="Assets/Air%20Con%201.jpeg" aria-label="View full photograph: Air conditioning">
+            <img src="Assets/images/air-con-1-1200.webp" srcset="Assets/images/air-con-1-600.webp 600w, Assets/images/air-con-1-1200.webp 901w" sizes="(max-width: 760px) 85vw, 72vw" width="901" height="1600" alt="Air conditioning equipment installed at a property" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Air conditioning</h3><p>Installation work</p></div>
+        </article>
+        <article class="project-slide" data-category="aircon" data-title="Air conditioning detail">
+          <a class="project-image" href="Assets/Air%20Con%202.jpeg" aria-label="View full photograph: Air conditioning detail">
+            <img src="Assets/images/air-con-2-1200.webp" srcset="Assets/images/air-con-2-600.webp 600w, Assets/images/air-con-2-1200.webp 899w" sizes="(max-width: 760px) 85vw, 72vw" width="899" height="1599" alt="A second view of installed air conditioning equipment" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Air conditioning detail</h3><p>Installation work</p></div>
+        </article>
+        <article class="project-slide" data-category="height" data-title="Working at height">
+          <a class="project-image" href="Assets/WAH%201.jpeg" aria-label="View full photograph: Working at height">
+            <img src="Assets/images/height-work-1-1200.webp" srcset="Assets/images/height-work-1-600.webp 600w, Assets/images/height-work-1-1200.webp 1200w" sizes="(max-width: 760px) 85vw, 72vw" width="1200" height="1600" alt="Property maintenance work at height" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Working at height</h3><p>Property maintenance</p></div>
+        </article>
+        <article class="project-slide" data-category="height" data-title="Work above ground level">
+          <a class="project-image" href="Assets/WAH%202.jpeg" aria-label="View full photograph: Work above ground level">
+            <img src="Assets/images/height-work-2-1200.webp" srcset="Assets/images/height-work-2-600.webp 600w, Assets/images/height-work-2-1200.webp 900w" sizes="(max-width: 760px) 85vw, 72vw" width="900" height="1600" alt="A further view of property work at height" loading="lazy" decoding="async">
+            <span class="image-expand" aria-hidden="true">View photograph ↗</span>
+          </a>
+          <div class="project-caption"><h3>Work above ground level</h3><p>Property maintenance</p></div>
+        </article>
+      </div>
+      <div class="gallery-footnote"><p>Work in progress, shown as it happens.</p><span>Scroll to explore <span aria-hidden="true">⟶</span> &nbsp; Select an image to view in full</span></div>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner section-shell"><div><p class="eyebrow light">Start a conversation</p><h2 id="contact-title">Let’s discuss<br>your project.</h2><p>Tell Steve what you have in mind, where the property is, and the work you’re considering.</p></div>
+      <div class="contact-details"><a class="contact-phone" href="tel:+447553097529">07553 097529 <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:powerupmyproperty@gmail.com">powerupmyproperty@gmail.com <span aria-hidden="true">↗</span></a><p>Gloucestershire<br>Domestic &amp; commercial enquiries</p><div class="socials"><a href="https://facebook.com/powerupmyproperty" target="_blank" rel="noopener noreferrer">Facebook <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a><a href="https://instagram.com/power_up_my_property" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="section-shell"><p>© <span id="year">2026</span> Power Up My Property</p><p>Preserving Character. Powering Homes. Renovating with Craft.</p><a href="#home">Back to top ↑</a></div></footer>
+  <dialog id="image-dialog" aria-labelledby="image-title">
+    <div class="dialog-bar"><p id="image-title"></p><button type="button" class="dialog-close" aria-label="Close full-size photograph" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <img id="dialog-image" alt="Selected project photograph">
+    <div class="dialog-navigation"><button type="button" class="arrow" id="dialog-prev" aria-label="Previous full-size photograph">←</button><p id="dialog-count" aria-live="polite"></p><button type="button" class="arrow" id="dialog-next" aria-label="Next full-size photograph">→</button></div>
+  </dialog>
 </body>
 </html>
