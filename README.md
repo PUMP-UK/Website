@@ -26,3 +26,11 @@ Do not replace the original logo with an AI redraw. New photographs should be ex
 ## Publishing
 
 The repository’s existing `main` branch is the publishing source. Push tested changes to `main`, then verify the GitHub Pages deployment and public site. To roll back, revert the redesign commit and push the revert; avoid rewriting shared history. The existing `CNAME.txt` is retained as a legacy file; GitHub Pages uses `CNAME`.
+
+## Search and AI discovery
+
+Three service pages cover electrical work, plastering and property renovations in Gloucestershire. Each has its own title, description, canonical URL, service information, project photographs and visible questions and answers. Keep homepage links and sitemap entries in sync when adding pages. `service-pages.css` extends the shared visual style; these pages work without JavaScript.
+
+JSON-LD connects the business, website, services and breadcrumbs through stable IDs. Keep it consistent with visible content. Do not add invented addresses, opening hours, reviews, credentials or coverage towns. The confirmed phone number is 07553 097529. The Hatton Electrical directory currently lists a different number and needs owner correction.
+
+The expanded checker validates all HTML pages, cross-page links and canonical URLs. Search Console ownership, sitemap submission, indexing requests and Google Business Profile management still require access to the owner's accounts. No indexing or ranking increase is implied by publishing.
